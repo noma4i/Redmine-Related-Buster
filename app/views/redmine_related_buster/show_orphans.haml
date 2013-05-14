@@ -1,0 +1,27 @@
+%h2 Related Orphans list
+%blockquote
+  %ul
+  - @project.issues.each do |issue|
+  - next unless issue.relations_from.map{|r| r.issue_to.status_id != issue.status_id ? true : false}.include?(true)
+
+    %li
+      %i
+        = issue.fixed_version.try(:name)
+      (
+      %b
+        = "#{issue.status.name}"
+      )
+      = link_to "##{issue.id} #{issue.subject}", issue_path(issue)
+      = link_to "[adopt all]", adopt_orphans_path(issue)
+      %ul
+        - issue.relations_from.where(:status_id != issue.status_id).each do |child|
+          - next if child.issue_to.status_id == issue.status_id
+          %li
+            (
+            %b
+              = "#{child.issue_to.status.name}"
+            )
+            = link_to "##{child.issue_to.id} #{child.issue_to.subject}", issue_path(child.issue_to)
+            %small
+              from
+              = child.issue_to.project.name
