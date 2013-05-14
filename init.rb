@@ -5,6 +5,7 @@ Redmine::Plugin.register :redmine_related_buster do
   author 'Alex Tsirel'
   description 'Showing difference between parent issues and their children'
   version '0.0.1'
+  url 'https://github.com/noma4i/Redmine-Related-Buster'
   author_url 'https://github.com/noma4i'
   requires_redmine :version_or_higher => '2.0.0'
 
