@@ -5,8 +5,8 @@ Redmine plugin to show related issues with their children if state of parent is 
 ### Quick Start
 - Clone/download plugin under "plugins/redmine_related_buster"
 - Switch on for project
-![Project Settings](screenshots/r_buster3.png?raw=true)
 - Link will be available in "Main menu"
+![Project Settings](screenshots/r_buster3.png?raw=true)
 
 ### Functions
 
