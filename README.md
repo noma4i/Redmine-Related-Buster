@@ -1,6 +1,6 @@
 ## Redmine Related Buster
 
-Redmine plugin to show related issues with their children if state of parent is not same as on related.
+Redmine plugin to show related issues with their children if state of parent is not same as on related with ability to mass assign parent state to all children. This is very helpful when you need to set same state for many related issues.
 
 ### Quick Start
 - Clone/download plugin under "plugins/redmine_related_buster"
